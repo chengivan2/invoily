@@ -1,8 +1,17 @@
-import { login, signup } from './actions';
+import { login, signup } from "./actions";
 
 export default function LoginPage() {
   return (
     <form>
+      <div>
+        <label htmlFor="name">Email:</label>
+        <input
+          id="name"
+          name="name"
+          type="text"
+          placeholder="Enter your First Name"
+        />
+      </div>
       <div>
         <label htmlFor="email">Email:</label>
         <input
