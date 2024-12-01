@@ -11,11 +11,10 @@ export default async function Dashboard() {
         .from('users')
         .select('name')
 
-    console.log(data)
   return (
     <div>
       <h1>Welcome to the Dashboard</h1>
-      {data ? <p>Hello, {data['name']}!</p> : <p>You need to be logged in to view your data.</p>}
+      {data ? <p>Hello, {data}!</p> : <p>You need to be logged in to view your data.</p>}
     </div>
   )
 }
