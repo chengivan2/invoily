@@ -6,6 +6,5 @@ export default async function Greeting() {
 
   return <div>
     <p>{JSON.stringify(user, null)}</p>
-    <p>{user}</p>
   </div>
 }
