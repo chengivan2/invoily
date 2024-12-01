@@ -11,6 +11,7 @@ export default async function Dashboard() {
         .from('users')
         .select('name')
 
+    console.log(data)
   return (
     <div>
       <h1>Welcome to the Dashboard</h1>
