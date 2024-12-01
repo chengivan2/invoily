@@ -1,8 +1,18 @@
-import { login } from "./actions";
+import { signup } from "./actions";
 
-export default function LoginPage() {
+export default function SignUpPage() {
   return (
     <form>
+      <div>
+        <label htmlFor="name">First Name</label>
+        <input
+          id="name"
+          name="name"
+          type="text"
+          placeholder="Enter your First Name"
+          required
+        />
+      </div>
       <div>
         <label htmlFor="email">Email:</label>
         <input
