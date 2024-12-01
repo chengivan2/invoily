@@ -7,10 +7,7 @@ export default async function Dashboard() {
   const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
   const supabase = createBrowserClient(supabaseUrl, supabaseAnonKey);
 
-  const { data, error } = await supabase
-    .schema("public")
-    .from("users")
-    .select("name");
+  const { data, error } = await supabase.from("users").select("name");
 
   return (
     <div>
