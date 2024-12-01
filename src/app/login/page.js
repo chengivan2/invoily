@@ -27,9 +27,6 @@ export default function LoginPage() {
         <button formAction={login} type="submit">
           Log in
         </button>
-        <button formAction={signup} type="submit">
-          Sign up
-        </button>
       </div>
     </form>
   );

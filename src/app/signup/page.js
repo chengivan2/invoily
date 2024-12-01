@@ -34,9 +34,6 @@ export default function SignUpPage() {
         />
       </div>
       <div>
-        <button formAction={login} type="submit">
-          Log in
-        </button>
         <button formAction={signup} type="submit">
           Sign up
         </button>
