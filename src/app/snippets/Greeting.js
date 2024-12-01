@@ -5,6 +5,6 @@ export default async function Greeting() {
   const { data: user } = await supabase.from("users").select("name");
 
   return <div>
-    <p>{JSON.stringify(user, null)}</p>
+    <p>{JSON.stringify(user[0].name, null)}</p>
   </div>
 }
