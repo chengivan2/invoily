@@ -1,26 +1,20 @@
-'use client'
+import { createClient } from '@supabase/supabase-js'
 
-import { useState, useEffect } from 'react'
+export default async function Dashboard() {
+    // Create a single supabase client for interacting with your database
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+    const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+    const supabase = createClient(supabaseUrl, supabaseAnonKey)
 
-export default function Dashboard() {
-  const [userName, setUserName] = useState(null)
-
-  useEffect(() => {
-    async function fetchUserName() {
-      const response = await fetch('../apis/name')
-      if (response.ok) {
-        const data = await response.json()
-        setUserName(data.name)
-      }
-    }
-
-    fetchUserName()
-  }, [])
+    const { data, error } = await supabase
+        .schema('public')
+        .from('users')
+        .select('name')
 
   return (
     <div>
       <h1>Welcome to the Dashboard</h1>
-      {userName ? <p>Hello, {userName}!</p> : <p>You need to be logged in to view your data</p>}
+      {data ? <p>Hello, {data['name']}!</p> : <p>You need to be logged in to view your data.</p>}
     </div>
   )
 }
