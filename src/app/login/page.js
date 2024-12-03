@@ -1,4 +1,5 @@
 import { login } from "./actions";
+import "./login.css";
 
 export default function LoginPage() {
   return (
