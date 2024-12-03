@@ -3,7 +3,7 @@ import Greeting from "./snippets/Greeting";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
+    <div className="main-wrapper">
       <main className={styles.main}>
         <Greeting />
       </main>

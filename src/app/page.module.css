@@ -1,3 +1,11 @@
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
 .main {
   display: flex;
   flex-direction: column;
